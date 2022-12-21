@@ -205,7 +205,7 @@ log_file = open(f"{LOGS_PATH}/{task_dataset}.tsv","w")
 
 indentifiers = df_test['idx'].unique().tolist()
 
-for i, l in zip(indentifiers, test_real_labels):
+for i, l in zip(indentifiers, predictions):
     i = str(i)
     l = str(l)
     log_file.write(f"{i}\t{l}\n")
